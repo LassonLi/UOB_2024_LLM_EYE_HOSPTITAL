@@ -1,0 +1,1 @@
+from .OCR import OCRDetector
