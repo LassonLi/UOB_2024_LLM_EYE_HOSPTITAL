@@ -39,7 +39,7 @@ EC2 服务是AWS提供的命令行形式云服务器服务，需要图形界面�
 
 然后设置储存大小，然后点击启动实例即可。
 
-##连接到EC2
+## 连接到EC2
 回到实例界面，应该会看到你刚刚新建的实例，点击连接即可进入服务器，记得设置用户名，默认也行
 ![image](https://github.com/LassonLi/UOB_2024_LLM_EYE_HOSPTITAL/assets/63943203/cf91210a-053d-490c-9c23-e7c04c39f065)
 
@@ -53,7 +53,7 @@ Amazon linux的包管理器和部分命令有些许不同，但是推荐用它
 但是我们主要并不使用ec2，因为他开机就要钱，太贵了
 ![image](https://github.com/LassonLi/UOB_2024_LLM_EYE_HOSPTITAL/assets/63943203/00ebfd6d-e0f9-4abf-9a2c-740ca1260ca7)
 
-#sagemaker
+# sagemaker
 sagemaker 是Amazon开放的一款专门用于机器学习的解决方案，完整到从数据标注到数据分析都有
 
 但是太贵了，我们只用模型训练的部分，其余部分有兴趣可以自己学习
@@ -88,7 +88,7 @@ sagemaker 是Amazon开放的一款专门用于机器学习的解决方案，完�
 后续有如何用sagemaker包来创建训练任务的代码，请自行阅读任意example
 ![image](https://github.com/LassonLi/UOB_2024_LLM_EYE_HOSPTITAL/assets/63943203/f44c64b8-f933-4876-bfcf-e9703b4431db)
 
-#S3
+# S3
 S3储存筒，就是一个云储存系统，控制台搜S3
 
 直接新建一个上传数据就行，注意别重复上传，他是随用随付钱的，反正要钱，如有需要，用它
