@@ -62,6 +62,40 @@ sagemaker 是Amazon开放的一款专门用于机器学习的解决方案，完�
 ![image](https://github.com/LassonLi/UOB_2024_LLM_EYE_HOSPTITAL/assets/63943203/3fae4e67-4c08-4870-a7c2-d6bf03a8397a)
 点击创建笔记本实例
 
+这里的笔记本实例类型并非我们模型运行时使用的服务器配置
+
+而是运行jupyter时的服务器，因此选个尽量低配和能运行数据加载预处理的就行
+
+下方的配置git，看情况配置
+![image](https://github.com/LassonLi/UOB_2024_LLM_EYE_HOSPTITAL/assets/63943203/01cb9e64-6f75-4091-8c29-2cc6d03ad662)
+
+然后回到主界面点击对应的笔记本 启动jupyter，我们就来到了熟悉的jupyter
+
+点击新建命令行，由于这是aws的jupyter，命令不会在电脑的terminal里面输出，因此会在这个新建的terminal里面输出
+
+最右侧有sagemaker的机器学习example，建议至少看一个
+
+![image](https://github.com/LassonLi/UOB_2024_LLM_EYE_HOSPTITAL/assets/63943203/2994ead8-9f0e-44a7-9824-465a45e03393)
+
+这里涉及到一个将数据从s3储存桶中加载的过程，我们也可以使用s3储存筒，来避免反复上传数据造成的带宽浪费（主要是费钱）
+![image](https://github.com/LassonLi/UOB_2024_LLM_EYE_HOSPTITAL/assets/63943203/519c1e0b-0876-4ad5-851e-36511fe19760)
+
+##训练模型
+具体来说，sagemaker有一个sagemaker包来训练模型和调用aws服务器资源
+
+这里是使用sagemaker包定义服务器类型，这才是真正训练模型的服务器，同时，一旦摁下程序运行按钮，这个服务器就会**开始计费**
+
+后续有如何用sagemaker包来创建训练任务的代码，请自行阅读任意example
+![image](https://github.com/LassonLi/UOB_2024_LLM_EYE_HOSPTITAL/assets/63943203/f44c64b8-f933-4876-bfcf-e9703b4431db)
+
+#S3
+S3储存筒，就是一个云储存系统，控制台搜S3
+
+直接新建一个上传数据就行，注意别重复上传，他是随用随付钱的，反正要钱，如有需要，用它
+
+
+
+
 
 
 
