@@ -1,0 +1,6 @@
+{
+    "is_referral_letter": true,
+    "is_Papilledema": true,
+    "whole_letter": "Dr. Emily Johnson\nXYZ Eye Clinic\n123 Main St, Suite 101\nCity, State, 12345\nAugust 5, 2024\n\nDr. John Smith\nNeurology Associates\n456 Oak Ave, Suite 202\nCity, State, 67890\n\nDear Dr. Smith,\n\nI am referring Mr. Robert Brown, a 50-year-old male, for urgent evaluation of suspicious discs. Mr. Brown has been experiencing persistent headaches, double vision, and occasional dizziness for the past month.\n\n**Referral Reason:**\nExamination revealed bilateral suspicious discs with indistinct margins, consistent with optic nerve swelling. Visual acuity was 20/60 in both eyes. Baseline blood tests, including CBC and CRP, were normal. An MRI of the brain and orbits is scheduled to rule out intracranial pathology.\n\nYour expertise is needed to determine the underlying cause and provide appropriate management for his condition.\n\nBest regards,\nDr. Emily Johnson\nXYZ Eye Clinic",
+    "referral_content": "Examination revealed bilateral suspicious discs with indistinct margins, consistent with optic nerve swelling. Visual acuity was 20/60 in both eyes. Baseline blood tests, including CBC and CRP, were normal. An MRI of the brain and orbits is scheduled to rule out intracranial pathology."
+}

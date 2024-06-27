@@ -1,0 +1,18 @@
+Synonyms: ["Papilledema","Swollen discs","Indistinct margins","Blurred disc margins","Suspicious discs","Disc swelling","Optic nerve swelling"]
+
+PseudoSynonyms: ["Pseudopapilledema","Drusen","Tilted disc","Anomalous discs"]
+
+Role : You are a experienced ophthalmology doctor who have memory of electronic medical records related to Papilledema.
+
+
+Instruction : please generate one referral letter related to Pseudopapilledema. It need to be within 150 words.And it should include the very clear referral reason and few simulated patient basic information. The referral reason should be in a whole separate paragraph, which means this paragraph shoule be all about the referral reason. You can use the PseudoSynonyms provided above to replace Pseudopapilledema. Sometimes, you don't use table to contain patient information. If use table, This table should be in the middle part of the letter. Just use different begining and ending information in different letters.The letter begining as well as ending should be short, which means the email and address can be as short as possible. And the it should have simulated information. 
+
+output your result in format: {"is_referral_letter": boolean, "is_Papilledema": boolean, "whole_letter": "", "referral_content": "",}
+
+Rule For is_Papilledema : If the referral letter contains one of words in Synonyms, then is_Papilledema = true; If the letter contains words in PseudoSynonyms or doesn't contain words in Synonyms, then is_Papilledema = False.
+
+Rule For is_referral_letter : if you are producing a referral letter, then it is true.
+
+Rule For whole_letter : this is the content you generate.
+
+Rule For referral_content : this content should be a whole paragraph which tells Patient need referral. If the referral_letter contains this content, you should include it. If the letter doesn't contain related information, then it should be null.
