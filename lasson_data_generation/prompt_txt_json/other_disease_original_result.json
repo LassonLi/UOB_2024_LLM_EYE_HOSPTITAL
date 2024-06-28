@@ -1,0 +1,6 @@
+{
+    "is_referral_letter": true,
+    "is_Papilledema": false,
+    "whole_letter": "Dr. Emily Johnson\nXYZ Medical Clinic\n123 Main St, Suite 101\nCity, State, 12345\nOctober 2, 2024\n\nDr. Michael Lee\nCardiology Associates\n456 Oak Ave, Suite 202\nCity, State, 67890\n\nDear Dr. Lee,\n\nI am referring Mr. John Smith, a 55-year-old male, for urgent evaluation due to suspected coronary artery disease. Mr. Smith has been experiencing chest pain, shortness of breath, and palpitations over the past few weeks.\n\n**Referral Reason:**\nBased on the patient's symptoms and initial examination findings, there is a high suspicion of coronary artery disease. An ECG showed ST-segment abnormalities, and his blood pressure was elevated. Given his history of hypertension and family history of heart disease, further cardiological assessment is necessary.\n\nYour expertise is needed to confirm the diagnosis and develop an appropriate treatment plan to manage his condition.\n\nBest regards,\nDr. Emily Johnson\nXYZ Medical Clinic",
+    "referral_content": "Based on the patient's symptoms and initial examination findings, there is a high suspicion of coronary artery disease. An ECG showed ST-segment abnormalities, and his blood pressure was elevated. Given his history of hypertension and family history of heart disease, further cardiological assessment is necessary."
+}

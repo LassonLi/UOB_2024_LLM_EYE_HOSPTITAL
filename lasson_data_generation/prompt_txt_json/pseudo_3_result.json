@@ -1,0 +1,6 @@
+{
+    "is_referral_letter": true,
+    "is_Papilledema": false,
+    "whole_letter": "Dr. Emily Johnson\nXYZ Eye Clinic\n123 Main St, Suite 101\nCity, State, 12345\nOctober 2, 2024\n\nDr. Michael Lee\nNeurology Associates\n456 Oak Ave, Suite 202\nCity, State, 67890\n\nDear Dr. Lee,\n\nI am referring Ms. Jane Doe, a 38-year-old female, for urgent evaluation of pseudopapilledema. Ms. Doe has been experiencing persistent headaches, blurred vision, and transient visual obscurations over the past two weeks.\n\n**Referral Reason:**\nExamination revealed bilateral pseudopapilledema with features suggestive of drusen. Visual acuity was 20/50 in both eyes. Baseline blood tests, including CBC and ESR, were normal. An MRI of the brain and orbits is scheduled to investigate potential intracranial causes.\n\nYour expertise is needed to determine the underlying cause and manage her condition to prevent further complications.\n\nBest regards,\nDr. Emily Johnson\nXYZ Eye Clinic",
+    "referral_content": "Examination revealed bilateral pseudopapilledema with features suggestive of drusen. Visual acuity was 20/50 in both eyes. Baseline blood tests, including CBC and ESR, were normal. An MRI of the brain and orbits is scheduled to investigate potential intracranial causes."
+}

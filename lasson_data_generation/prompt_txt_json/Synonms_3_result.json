@@ -1,0 +1,6 @@
+{
+    "is_referral_letter": true,
+    "is_Papilledema": true,
+    "whole_letter": "Dr. Sarah Thompson\nABC Eye Center\n456 Elm St, Suite 202\nTown, State, 23456\nJuly 10, 2024\n\nDr. Michael Lee\nNeuro Specialist Clinic\n789 Pine Rd, Suite 303\nTown, State, 78901\n\nDear Dr. Lee,\n\nI am referring Ms. Jane Doe, a 38-year-old female, for urgent evaluation of blurred disc margins. Ms. Doe presented with persistent headaches, nausea, and visual disturbances over the past two weeks.\n\n**Referral Reason:**\nExamination revealed bilateral blurred disc margins, suggestive of optic nerve swelling. Visual acuity was 20/50 bilaterally. Blood tests (CBC, ESR, CRP) were normal. An MRI is scheduled to rule out intracranial causes.\n\nYour expertise is required to determine the cause and manage her condition.\n\nBest regards,\nDr. Sarah Thompson\nABC Eye Center",
+    "referral_content": "Examination revealed bilateral blurred disc margins, suggestive of optic nerve swelling. Visual acuity was 20/50 bilaterally. Blood tests (CBC, ESR, CRP) were normal. An MRI is scheduled to rule out intracranial causes."
+}
