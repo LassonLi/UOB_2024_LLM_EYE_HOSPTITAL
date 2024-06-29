@@ -22,7 +22,7 @@ $ pip install tesseract_ocr-0.1.tar.gz
 
 
 ```python
-from my_tesseract import TesseractOCR
+from my_tesseract_ocr import TesseractOCR
 
 ocr = TesseractOCR('/path/to/tesseract')
 result_string = ocr.perform_ocr('/path/to/image.jpg')
