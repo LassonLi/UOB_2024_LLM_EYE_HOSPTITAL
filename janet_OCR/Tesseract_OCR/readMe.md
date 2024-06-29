@@ -29,5 +29,6 @@ result_string = ocr.perform_ocr('/path/to/image.jpg')
 print(result_string)
 ```
 
-（將 "/path/to/tesseract" 替換為tesseract executable in your PATH) --> 在我電腦裡的路徑是/opt/homebrew/Cellar/tesseract/5.4.1/bin/tesseract 給你參考
+（將 "/path/to/tesseract" 替換為tesseract executable in your PATH) --> 在我電腦裡的路徑是/opt/homebrew/Cellar/tesseract/5.4.1/bin/tesseract 給你參考  
+
 （將 "/path/to/image.jpg" 替換為圖片路徑）
