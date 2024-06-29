@@ -1,0 +1,8 @@
+setup.py
+Tesseract_OCR.egg-info/PKG-INFO
+Tesseract_OCR.egg-info/SOURCES.txt
+Tesseract_OCR.egg-info/dependency_links.txt
+Tesseract_OCR.egg-info/requires.txt
+Tesseract_OCR.egg-info/top_level.txt
+my_tesseract_ocr/__init__.py
+my_tesseract_ocr/ocr.py
