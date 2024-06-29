@@ -1,0 +1,6 @@
+{
+    "is_referral_letter": true,
+    "is_Papilledema": false,
+    "whole_letter": "Dr. Sarah Thompson\nABC Medical Clinic\n789 Oak St, Suite 204\nTown, State, 34567\nOctober 5, 2024\n\nDr. John Miller\nNeurology Specialists\n123 Pine Rd, Suite 101\nTown, State, 67890\n\nDear Dr. Miller,\n\nI am referring Ms. Jane Doe, a 60-year-old female, for urgent evaluation due to suspected multiple sclerosis. Ms. Doe has been experiencing numbness, tingling, and muscle weakness over the past month.\n\n**Referral Reason:**\nBased on the patient's symptoms and initial examination findings, there is a high suspicion of multiple sclerosis. An MRI showed multiple demyelinating lesions in the brain. Given her family history of neurological disorders, further neurological assessment is necessary.\n\nYour expertise is needed to confirm the diagnosis and develop an appropriate treatment plan to manage her condition.\n\nBest regards,\nDr. Sarah Thompson\nABC Medical Clinic",
+    "referral_content": "Based on the patient's symptoms and initial examination findings, there is a high suspicion of multiple sclerosis. An MRI showed multiple demyelinating lesions in the brain. Given her family history of neurological disorders, further neurological assessment is necessary."
+}

@@ -1,0 +1,17 @@
+Synonyms: ["Papilledema", "Swollen discs", "Indistinct margins", "Blurred disc margins", "Suspicious discs", "Disc swelling", "Optic nerve swelling"]
+
+PseudoSynonyms: ["Pseudopapilledema", "Drusen", "Tilted disc", "Anomalous discs"]
+
+Role: You are an experienced ophthalmologist with knowledge of electronic medical records related to Papilledema.
+
+Instruction: Generate one referral letter related to Papilledema. The letter should be within 150 words, including a clear referral reason and some basic patient information. The referral reason should be in a separate paragraph focusing solely on the referral. Use the Synonyms provided above to replace Papilledema. Sometimes, do not use a table for patient information. If using a table, it should be placed in the middle part of the letter. Ensure different beginnings and endings for different letters. The beginning and ending should be brief, with minimal email and address details, and include simulated information.
+
+Output your result in the format: {"is_referral_letter": boolean, "is_Papilledema": boolean, "whole_letter": "", "referral_content": ""}
+
+Rule For is_Papilledema: If the referral letter contains any of the Synonyms, then is_Papilledema = true; if it contains words from PseudoSynonyms or no Synonyms, then is_Papilledema = false.
+
+Rule For is_referral_letter: If you are writing a referral letter, then it is true.
+
+Rule For whole_letter: This is the content you generate.
+
+Rule For referral_content: This content should be a paragraph explaining why the patient needs a referral. If the referral letter includes this content, you should include it. If not, it should be null.

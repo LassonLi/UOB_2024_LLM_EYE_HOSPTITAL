@@ -1,0 +1,6 @@
+{
+    "is_referral_letter": true,
+    "is_Papilledema": false,
+    "whole_letter": "Dr. Sarah Thompson\nABC Medical Clinic\n456 Elm St, Suite 202\nTown, State, 23456\nOctober 10, 2024\n\nDr. John Smith\nEndocrinology Associates\n789 Pine Rd, Suite 303\nTown, State, 67890\n\nDear Dr. Smith,\n\nI am referring Ms. Jane Doe, a 35-year-old female, for urgent evaluation due to suspected Hashimoto's thyroiditis. Ms. Doe has been experiencing fatigue, weight gain, and cold intolerance over the past few months.\n\n**Referral Reason:**\nBased on the patient's symptoms and initial examination findings, there is a high suspicion of Hashimoto's thyroiditis. Lab tests revealed elevated TSH and anti-thyroid antibodies. Given her family history of thyroid disorders, further endocrinological assessment is necessary.\n\nYour expertise is needed to confirm the diagnosis and develop an appropriate treatment plan to manage her condition.\n\nBest regards,\nDr. Sarah Thompson\nABC Medical Clinic",
+    "referral_content": "Based on the patient's symptoms and initial examination findings, there is a high suspicion of Hashimoto's thyroiditis. Lab tests revealed elevated TSH and anti-thyroid antibodies. Given her family history of thyroid disorders, further endocrinological assessment is necessary."
+}
