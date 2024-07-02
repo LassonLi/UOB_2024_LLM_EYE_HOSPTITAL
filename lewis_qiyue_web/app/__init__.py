@@ -1,4 +1,6 @@
 from flask import Flask
+
+import config
 from config import Config
 import os
 
@@ -9,10 +11,13 @@ def create_app():
     app = Flask(__name__)
 
     # Set up configuration settings for the Flask app
-    app.config.from_object(Config)
+    app.config.from_object('config.Config')
+
+    #Print details of app.config
+    print(app.config["CREDENTIAL_PATH"])
 
     # Set up the Google Cloud credentials environmnet variable
-    os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = app.config["GOOGLE_APPLICATION_CREDENTIALS"]
+    os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = app.config["CREDENTIAL_PATH"]
 
     # Import thr routes module
     from . import routes
