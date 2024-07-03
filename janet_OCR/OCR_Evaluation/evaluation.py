@@ -115,3 +115,11 @@ class Eval:
         average_score: float = total_score / num_images if num_images > 0 else 0.0
 
         return average_score
+
+
+if __name__ == "__main__":
+    detector = OCRDetector()
+    text = detector.run_quickstart("assests/Referral_letter_example.jpg")
+    # print(text)
+
+    detector.calculate_score_from_dataset("/Users/lishin/Desktop/Bristol/Summer Project/UOB_2024_LLM_EYE_HOSPTITAL/janet_OCR/dataset/training_data")
