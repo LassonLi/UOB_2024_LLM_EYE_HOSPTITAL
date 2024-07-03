@@ -1,7 +1,15 @@
 import os
 import json
+from my_ocr import OCRDetector
+from my_aws_ocr import AWSTextDetector
+from my_tesseract_ocr import TesseractOCR
 
 class Eval:
+
+    def __init__(self):
+        self.google_detector = OCRDetector()
+        self.aws_detector = AWSTextDetector()
+        self.tesseract_detector = TesseractOCR("/opt/homebrew/Cellar/tesseract/5.4.1/bin/tesseract")
 
 
     def get_dict_from_dataset(self, directory_path: str) -> dict:
@@ -73,7 +81,7 @@ class Eval:
 
 
 
-    def calculate_score_from_dataset(self, base_directory_path: str) -> float:
+    def calculate_score_from_dataset(self, detector_type: str, base_directory_path: str) -> float:
 
         total_score = 0.0
         num_images = 0
@@ -100,8 +108,14 @@ class Eval:
                     print(f"Annotation file: {json_file_path}")
                     print(f"Correct text: {groundtruth}")
 
+                if detector_type == "google" :
+                    detect_text = self.google_detector.run_quickstart(image_file_path)
+                elif detector_type == "aws":
+                    detect_text = self.aws_detector.detect_file_text(document_file_name=image_file_path)
+                else:
+                    detect_text = self.tesseract_detector.perform_ocr(image_file_path)
 
-                detect_text = self.run_quickstart(image_file_path)
+
                 print(f"Detected text: {detect_text}")
 
 
@@ -118,8 +132,10 @@ class Eval:
 
 
 if __name__ == "__main__":
-    detector = OCRDetector()
-    text = detector.run_quickstart("assests/Referral_letter_example.jpg")
-    # print(text)
+    eval = Eval()
 
-    detector.calculate_score_from_dataset("/Users/lishin/Desktop/Bristol/Summer Project/UOB_2024_LLM_EYE_HOSPTITAL/janet_OCR/dataset/training_data")
+    eval.calculate_score_from_dataset("google", "/Users/lishin/Desktop/Bristol/Summer Project/UOB_2024_LLM_EYE_HOSPTITAL/janet_OCR/dataset/training_data")
+    # eval.calculate_score_from_dataset("aws",
+    #                                   "/Users/lishin/Desktop/Bristol/Summer Project/UOB_2024_LLM_EYE_HOSPTITAL/janet_OCR/dataset/training_data")
+    # eval.calculate_score_from_dataset("tesseract",
+    #                                   "/Users/lishin/Desktop/Bristol/Summer Project/UOB_2024_LLM_EYE_HOSPTITAL/janet_OCR/dataset/training_data")
