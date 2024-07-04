@@ -3,6 +3,7 @@ import json
 from my_ocr import OCRDetector
 from my_aws_ocr import AWSTextDetector
 from my_tesseract_ocr import TesseractOCR
+from jiwer import wer
 
 class Eval:
 
@@ -73,17 +74,16 @@ class Eval:
 
 
     def calculate_score(self, detected_text: str, correct_text: str) -> float:
-        score = 0.0
+        # calculate logic (error = wer(reference, hypothesis))
+        error = wer(correct_text, detected_text)
 
-        # calculate logic
-
-        return score
+        return error
 
 
 
     def calculate_score_from_dataset(self, detector_type: str, base_directory_path: str) -> float:
 
-        total_score = 0.0
+        total_error = 0.0
         num_images = 0
 
         image_directory_path = os.path.join(base_directory_path, 'images')
@@ -104,9 +104,9 @@ class Eval:
 
                         groundtruth = self.getSortedText(f)
 
-                    print(f"Image file:\n {image_file_path}")
-                    print(f"Annotation file: {json_file_path}")
-                    print(f"Correct text: {groundtruth}")
+                    # print(f"Image file:\n {image_file_path}")
+                    # print(f"Annotation file: {json_file_path}")
+                    # print(f"Correct text: {groundtruth}")
 
                 if detector_type == "google" :
                     detect_text = self.google_detector.run_quickstart(image_file_path)
@@ -115,27 +115,31 @@ class Eval:
                 else:
                     detect_text = self.tesseract_detector.perform_ocr(image_file_path)
 
-
-                print(f"Detected text: {detect_text}")
+                # print(f"Detected text: {detect_text}")
 
 
                 if groundtruth is not None:
                     # compare origin text and ocr text --> get a score
-                    score = self.calculate_score(detect_text, groundtruth)
-                    total_score += score
+                    error = self.calculate_score(detect_text, groundtruth)
+                    total_error += error
                     num_images += 1
 
-        # calculate the average score
-        average_score: float = total_score / num_images if num_images > 0 else 0.0
+        # calculate the average score (error越低越準確）
+        average_error: float = total_error / num_images if num_images > 0 else 0.0
 
-        return average_score
+        return average_error
 
 
 if __name__ == "__main__":
     eval = Eval()
 
-    eval.calculate_score_from_dataset("google", "/Users/lishin/Desktop/Bristol/Summer Project/UOB_2024_LLM_EYE_HOSPTITAL/janet_OCR/dataset/training_data")
-    # eval.calculate_score_from_dataset("aws",
-    #                                   "/Users/lishin/Desktop/Bristol/Summer Project/UOB_2024_LLM_EYE_HOSPTITAL/janet_OCR/dataset/training_data")
-    # eval.calculate_score_from_dataset("tesseract",
-    #                                   "/Users/lishin/Desktop/Bristol/Summer Project/UOB_2024_LLM_EYE_HOSPTITAL/janet_OCR/dataset/training_data")
+    google_average_error = eval.calculate_score_from_dataset("google", "/Users/lishin/Desktop/Bristol/Summer Project/UOB_2024_LLM_EYE_HOSPTITAL/janet_OCR/dataset/training_data")
+    print(google_average_error)
+
+    aws_average_error = eval.calculate_score_from_dataset("aws",
+                                      "/Users/lishin/Desktop/Bristol/Summer Project/UOB_2024_LLM_EYE_HOSPTITAL/janet_OCR/dataset/training_data")
+    print(aws_average_error)
+    
+    tesseract_average_error = eval.calculate_score_from_dataset("tesseract",
+                                      "/Users/lishin/Desktop/Bristol/Summer Project/UOB_2024_LLM_EYE_HOSPTITAL/janet_OCR/dataset/training_data")
+    print(tesseract_average_error)
