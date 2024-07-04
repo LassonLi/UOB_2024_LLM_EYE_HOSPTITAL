@@ -1,3 +1,4 @@
+import json
 from venv import logger
 import boto3
 
@@ -37,6 +38,9 @@ class AWSTextDetector:
             )
             logger.info("Detected %s blocks.", len(response["Blocks"]))
 
+            # 打印整個 JSON 響應
+            # print(json.dumps(response, indent=4))
+
 
             # Extract the text from the response
             result_string = ""
@@ -59,5 +63,5 @@ class AWSTextDetector:
 
 if __name__ == "__main__":
     aws_text_detector = AWSTextDetector()
-    response = aws_text_detector.detect_file_text(document_file_name='assests/Referral_letter_example.jpg')
+    response = aws_text_detector.detect_file_text(document_file_name='../assests/Referral_letter_example.jpg')
     print(response)
