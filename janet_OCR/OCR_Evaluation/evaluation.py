@@ -191,17 +191,17 @@ if __name__ == "__main__":
     eval = Eval()
 
     # [per file]
-    # print("per file: ")
-    # google_average_wer_error, google_average_cer_error = eval.calculate_error_from_dataset_file("google", "/Users/lishin/Desktop/Bristol/Summer Project/UOB_2024_LLM_EYE_HOSPTITAL/janet_OCR/dataset/testing_data")
-    # print(google_average_wer_error, google_average_cer_error)
-    #
-    # aws_average_wer_error, aws_average_cer_error = eval.calculate_error_from_dataset_file("aws",
-    #                                   "/Users/lishin/Desktop/Bristol/Summer Project/UOB_2024_LLM_EYE_HOSPTITAL/janet_OCR/dataset/testing_data")
-    # print(aws_average_wer_error, aws_average_cer_error)
-    #
-    # tesseract_average_wer_error, tesseract_average_cer_error = eval.calculate_error_from_dataset_file("tesseract",
-    #                                   "/Users/lishin/Desktop/Bristol/Summer Project/UOB_2024_LLM_EYE_HOSPTITAL/janet_OCR/dataset/testing_data")
-    # print(tesseract_average_wer_error, tesseract_average_cer_error)
+    print("per file: ")
+    google_average_wer_error, google_average_cer_error = eval.calculate_error_from_dataset_file("google", "/Users/lishin/Desktop/Bristol/Summer Project/UOB_2024_LLM_EYE_HOSPTITAL/janet_OCR/dataset/testing_data")
+    print(google_average_wer_error, google_average_cer_error)
+
+    aws_average_wer_error, aws_average_cer_error = eval.calculate_error_from_dataset_file("aws",
+                                      "/Users/lishin/Desktop/Bristol/Summer Project/UOB_2024_LLM_EYE_HOSPTITAL/janet_OCR/dataset/testing_data")
+    print(aws_average_wer_error, aws_average_cer_error)
+
+    tesseract_average_wer_error, tesseract_average_cer_error = eval.calculate_error_from_dataset_file("tesseract",
+                                      "/Users/lishin/Desktop/Bristol/Summer Project/UOB_2024_LLM_EYE_HOSPTITAL/janet_OCR/dataset/testing_data")
+    print(tesseract_average_wer_error, tesseract_average_cer_error)
 
     # [whole]
     print("============================================================================")
