@@ -18,16 +18,26 @@
             <input type="file" id="image" name="image" accept="image/*, application/pdf" required>
             <button type="submit">Convert</button>
         </form>
+
+        <div class="content">
+            {% if image_url %}
+                <div class="image-section">
+                    <h2>Uploaded Image</h2>
+                    <img src="{{ url_for('static', filename=image_url) }}" alt="Uploaded Image">
+                </div>
+            {% endif %}
+            {% if text %}
+                <div class="text-section">
+                    <h2>Extraction Result</h2>
+                    <p>Here is the text extracted from your image:</p>
+                    <p>{{ text }}</p>
+                </div>
+            {% endif %}
+        </div>
+
         {% if error %}
             <div class="error">
                 <p>{{ error }}</p>
-            </div>
-        {% endif %}
-        {% if text %}
-            <div class="result">
-                <h2>Extraction Result</h2>
-                <p>Here is the text extracted from your image:</p>
-                <p>{{ text }}</p>
             </div>
         {% endif %}
     </main>
