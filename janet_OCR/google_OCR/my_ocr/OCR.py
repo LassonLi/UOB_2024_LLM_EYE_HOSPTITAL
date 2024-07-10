@@ -5,6 +5,8 @@ import io
 
 class OCRDetector:
 
+    global float
+
     def __init__(self):
         # Instantiates a client
         self.client = vision.ImageAnnotatorClient()
@@ -35,4 +37,6 @@ class OCRDetector:
 if __name__ == "__main__":
     detector = OCRDetector()
     text = detector.run_quickstart("assests/Referral_letter_example.jpg")
-    print(text)
+    # print(text)
+
+    detector.calculate_score_from_dataset("/Users/lishin/Desktop/Bristol/Summer Project/UOB_2024_LLM_EYE_HOSPTITAL/janet_OCR/dataset/training_data")

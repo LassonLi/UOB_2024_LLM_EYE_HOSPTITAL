@@ -11,13 +11,14 @@ def create_app():
     app = Flask(__name__)
 
     # Set up configuration settings for the Flask app
-    app.config.from_object('config.Config')
+    app.config.from_object(Config)
 
     #Print details of app.config
     print(app.config["CREDENTIAL_PATH"])
 
     # Set up the Google Cloud credentials environmnet variable
     os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = app.config["CREDENTIAL_PATH"]
+    os.environ["GOOGLE_CLOUD_PROJECT"] = "ocr-project-427217"
 
     # Import thr routes module
     from . import routes
