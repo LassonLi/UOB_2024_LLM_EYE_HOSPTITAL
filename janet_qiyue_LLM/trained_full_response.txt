@@ -1,0 +1,758 @@
+Synonyms: ["Papilledema","Swollen discs","Indistinct margins","Blurred disc margins","Suspicious discs","Disc swelling","Optic nerve swelling"]
+
+PseudoSynonyms: ["Pseudopapilledema","Drusen","Tilted disc","Anomalous discs"]
+
+
+Role : You are a experienced doctor who have memory of electronic medical records related to many diseases.
+
+Instruction : please extract the referral reason from the following referral letter  separeted by ###. output your result
+
+output your result directly in format: {"referral_content": "",}
+
+Rule For is_Papilledema : If the referral letter contains one of words in Synonyms, then is_Papilledema = true; If the letter contains words in PseudoSynonyms or doesn't contain words in Synonyms, then is_Papilledema = False.
+
+
+Rule For referral_content : this content should be a whole paragraph which tells Patient need referral. If the referral_letter contains this content, you should include it. If the letter doesn't contain related information, then it should be null.
+
+###
+
+Dear Dr. Smith,
+
+I am writing to refer Mrs. Jane Doe, a 78-year-old woman, for further evaluation. Mrs. Doe underwent uncomplicated bilateral cataract surgery three years ago with hydrophobic acrylic IOL implants. Her best-corrected visual acuity is 8/10 in both eyes, and her intraocular pressure is 18 mmHg bilaterally. Upon recent examination, XFM was observed at the pupillary border and on the anterior surface of the IOL in her right eye.
+
+The referral reason is the presence of XFM on the anterior surface of the IOL in the right eye. Given the potential implications and the need for specialized care, I recommend further investigation and management.
+
+Thank you for your attention to this case.
+
+Sincerely,
+Dr. John Smith
+
+### The referral reason is the presence of XFM on the anterior surface of the IOL in the right eye. Given the potential implications and the need for specialized care, I recommend further investigation and management.
+prediction:  The referral reason is the presence of XFM on the anterior surface of the IOL in the right eye. Given the potential implications and the need for specialized care, I recommend further investigation and management.
+
+ground_truth: The referral reason is the presence of XFM on the anterior surface of the IOL in the right eye. Given the potential implications and the need for specialized care, I recommend further investigation and management.
+=============================
+Synonyms: ["Papilledema","Swollen discs","Indistinct margins","Blurred disc margins","Suspicious discs","Disc swelling","Optic nerve swelling"]
+
+PseudoSynonyms: ["Pseudopapilledema","Drusen","Tilted disc","Anomalous discs"]
+
+
+Role : You are a experienced doctor who have memory of electronic medical records related to many diseases.
+
+Instruction : please extract the referral reason from the following referral letter  separeted by ###. output your result
+
+output your result directly in format: {"referral_content": "",}
+
+Rule For is_Papilledema : If the referral letter contains one of words in Synonyms, then is_Papilledema = true; If the letter contains words in PseudoSynonyms or doesn't contain words in Synonyms, then is_Papilledema = False.
+
+
+Rule For referral_content : this content should be a whole paragraph which tells Patient need referral. If the referral_letter contains this content, you should include it. If the letter doesn't contain related information, then it should be null.
+
+###
+
+Dear Colleague,
+
+I am writing to refer Mrs. Jane Smith, a 61-year-old female patient, for further evaluation and management.
+
+Patient Name: Jane Smith
+Age: 61
+Family History: Two brothers with Trigeminal Neuralgia (TN)
+Symptoms: Paroxysmal pain triggered by talking, chewing, and light touch of the nasal wing
+Imaging: MRI showed a neurovascular conflict producing dislocation and atrophy of the trigeminal root
+
+The reason for referral is due to the presence of a neurovascular conflict seen on MRI, which has led to dislocation and atrophy of the trigeminal root, causing significant paroxysmal pain. Given her family history of TN, advanced evaluation and potential surgical intervention might be required.
+
+Thank you for your prompt attention to this matter.
+
+Sincerely,
+Dr. John Doe
+
+### The reason for referral is due to the presence of a neurovascular conflict seen on MRI, which has led to dislocation and atrophy of the trigeminal root, causing significant paroxysmal pain. Given her family history of TN, advanced evaluation and potential surgical intervention might be required.
+prediction:  The reason for referral is due to the presence of a neurovascular conflict seen on MRI, which has led to dislocation and atrophy of the trigeminal root, causing significant paroxysmal pain. Given her family history of TN, advanced evaluation and potential surgical intervention might be required.
+
+ground_truth: The reason for referral is due to the presence of a neurovascular conflict seen on MRI, which has led to dislocation and atrophy of the trigeminal root, causing significant paroxysmal pain. Given her family history of TN, advanced evaluation and potential surgical intervention might be required.
+=============================
+Synonyms: ["Papilledema","Swollen discs","Indistinct margins","Blurred disc margins","Suspicious discs","Disc swelling","Optic nerve swelling"]
+
+PseudoSynonyms: ["Pseudopapilledema","Drusen","Tilted disc","Anomalous discs"]
+
+
+Role : You are a experienced doctor who have memory of electronic medical records related to many diseases.
+
+Instruction : please extract the referral reason from the following referral letter  separeted by ###. output your result
+
+output your result directly in format: {"referral_content": "",}
+
+Rule For is_Papilledema : If the referral letter contains one of words in Synonyms, then is_Papilledema = true; If the letter contains words in PseudoSynonyms or doesn't contain words in Synonyms, then is_Papilledema = False.
+
+
+Rule For referral_content : this content should be a whole paragraph which tells Patient need referral. If the referral_letter contains this content, you should include it. If the letter doesn't contain related information, then it should be null.
+
+###
+
+Dear Specialist,
+
+I am referring a 44-year-old Caucasoid male patient for further evaluation and management.
+
+Patient Information:
+Name: John Doe
+Age: 44
+Gender: Male
+Ethnicity: Caucasoid
+Medical History: The patient, otherwise healthy, experienced very rare epileptic-like attacks and recently succumbed to sudden cardiac death while performing a minor effort task. Post-mortem examination revealed a heart weight of 380.0 grams with dimensions 14.7 cm x 12.0 cm. Significant findings included global dilatation and a congenitally malformed tricuspid valve with downward ventricular insertion of the ring, consistent with Ebstein Disease.
+
+The patient needs a referral for a comprehensive cardiac evaluation due to the findings suggestive of Ebstein Disease, which likely contributed to his sudden cardiac death. Timely diagnosis and appropriate management are crucial for this condition.
+
+Best Regards,
+Dr. [Your Name]
+
+### The patient needs a referral for a comprehensive cardiac evaluation due to the findings suggestive of Ebstein Disease, which likely contributed to his sudden cardiac death. Timely diagnosis and appropriate management are crucial for this condition.
+prediction:  The patient needs a referral for a comprehensive cardiac evaluation due to the findings suggestive of Ebstein Disease, which likely contributed to his sudden cardiac death. Timely diagnosis and appropriate management are crucial for this condition.
+
+ground_truth: The patient needs a referral for a comprehensive cardiac evaluation due to the findings suggestive of Ebstein Disease, which likely contributed to his sudden cardiac death. Timely diagnosis and appropriate management are crucial for this condition.
+=============================
+Synonyms: ["Papilledema","Swollen discs","Indistinct margins","Blurred disc margins","Suspicious discs","Disc swelling","Optic nerve swelling"]
+
+PseudoSynonyms: ["Pseudopapilledema","Drusen","Tilted disc","Anomalous discs"]
+
+
+Role : You are a experienced doctor who have memory of electronic medical records related to many diseases.
+
+Instruction : please extract the referral reason from the following referral letter  separeted by ###. output your result
+
+output your result directly in format: {"referral_content": "",}
+
+Rule For is_Papilledema : If the referral letter contains one of words in Synonyms, then is_Papilledema = true; If the letter contains words in PseudoSynonyms or doesn't contain words in Synonyms, then is_Papilledema = False.
+
+
+Rule For referral_content : this content should be a whole paragraph which tells Patient need referral. If the referral_letter contains this content, you should include it. If the letter doesn't contain related information, then it should be null.
+
+###
+
+Dear Colleague,
+
+I am referring a 48-year-old male patient with a significant medical history including COPD, chronic anemia, chronic kidney disease, and a past history of polysubstance and alcohol abuse. The patient also has a history of PUD gastritis and gastrointestinal bleeding.
+
+Referral Reason: The patient presented with fever, sudden onset nausea, abdominal pain, and hematemesis for the past three days. Given his complex medical background and the acute nature of his current symptoms, further specialist evaluation and management are warranted.
+
+Thank you for your attention to this matter.
+
+Best regards,
+Dr. Smith
+
+### The patient presented with fever, sudden onset nausea, abdominal pain, and hematemesis for the past three days. Given his complex medical background and the acute nature of his current symptoms, further specialist evaluation and management are warranted.
+prediction:  The patient presented with fever, sudden onset nausea, abdominal pain, and hematemesis for the past three days. Given his complex medical background and the acute nature of his current symptoms, further specialist evaluation and management are warranted.
+
+ground_truth: The patient presented with fever, sudden onset nausea, abdominal pain, and hematemesis for the past three days. Given his complex medical background and the acute nature of his current symptoms, further specialist evaluation and management are warranted.
+=============================
+Synonyms: ["Papilledema","Swollen discs","Indistinct margins","Blurred disc margins","Suspicious discs","Disc swelling","Optic nerve swelling"]
+
+PseudoSynonyms: ["Pseudopapilledema","Drusen","Tilted disc","Anomalous discs"]
+
+
+Role : You are a experienced doctor who have memory of electronic medical records related to many diseases.
+
+Instruction : please extract the referral reason from the following referral letter  separeted by ###. output your result
+
+output your result directly in format: {"referral_content": "",}
+
+Rule For is_Papilledema : If the referral letter contains one of words in Synonyms, then is_Papilledema = true; If the letter contains words in PseudoSynonyms or doesn't contain words in Synonyms, then is_Papilledema = False.
+
+
+Rule For referral_content : this content should be a whole paragraph which tells Patient need referral. If the referral_letter contains this content, you should include it. If the letter doesn't contain related information, then it should be null.
+
+###
+
+Dear Dr. Smith,
+
+I am writing to refer my patient, a 32-year-old female, who underwent gastric bypass surgery and subsequently lost 219 lb. Her current weight is 185 lb.
+
+Reason for referral: The patient has persistent skin sores bilaterally in her groin and suprapubic region due to excess overhanging skin. Though these sores do not interfere with her activities of daily living, they require specialized dermatological and possibly surgical intervention to prevent further complications.
+
+An infraumbilical panniculectomy with umbilical transposition was carried out previously, and at her 13-month follow-up, there was complete resolution of her initial skin problems. Continuous monitoring and further treatment are essential for her ongoing recovery.
+
+Thank you for your attention to this case.
+
+Sincerely,
+Dr. John Doe
+
+### The patient has persistent skin sores bilaterally in her groin and suprapubic region due to excess overhanging skin. Though these sores do not interfere with her activities of daily living, they require specialized dermatological and possibly surgical intervention to prevent further complications.
+prediction:  The patient has persistent skin sores bilaterally in her groin and suprapubic region due to excess overhanging skin. Though these sores do not interfere with her activities of daily living, they require specialized dermatological and possibly surgical intervention to prevent further complications.
+
+ground_truth: The patient has persistent skin sores bilaterally in her groin and suprapubic region due to excess overhanging skin. Though these sores do not interfere with her activities of daily living, they require specialized dermatological and possibly surgical intervention to prevent further complications.
+=============================
+Synonyms: ["Papilledema","Swollen discs","Indistinct margins","Blurred disc margins","Suspicious discs","Disc swelling","Optic nerve swelling"]
+
+PseudoSynonyms: ["Pseudopapilledema","Drusen","Tilted disc","Anomalous discs"]
+
+
+Role : You are a experienced doctor who have memory of electronic medical records related to many diseases.
+
+Instruction : please extract the referral reason from the following referral letter  separeted by ###. output your result
+
+output your result directly in format: {"referral_content": "",}
+
+Rule For is_Papilledema : If the referral letter contains one of words in Synonyms, then is_Papilledema = true; If the letter contains words in PseudoSynonyms or doesn't contain words in Synonyms, then is_Papilledema = False.
+
+
+Rule For referral_content : this content should be a whole paragraph which tells Patient need referral. If the referral_letter contains this content, you should include it. If the letter doesn't contain related information, then it should be null.
+
+###
+
+Dear Colleague,
+
+I am referring a 27-year-old female patient from Manaus, Brazil, who presented with fever, myalgia, bleeding, and headache. Despite an extensive evaluation, including a negative result for leptospirosis, her condition worsened, resulting in her unfortunate passing in January 2012.
+
+The referral is made to request a thorough review of the case to identify any other potential infectious or hematological disorders that might have been missed. Your expertise in these areas would be greatly appreciated to provide insights into this complex case and prevent future occurrences.
+
+Thank you for your attention.
+
+Best regards,
+Dr. John Smith
+
+### The referral is made to request a thorough review of the case to identify any other potential infectious or hematological disorders that might have been missed. Your expertise in these areas would be greatly appreciated to provide insights into this complex case and prevent future occurrences.
+prediction:  The referral is made to request a thorough review of the case to identify any other potential infectious or hematological disorders that might have been missed. Your expertise in these areas would be greatly appreciated to provide insights into this complex case and prevent future occurrences.
+
+ground_truth: The referral is made to request a thorough review of the case to identify any other potential infectious or hematological disorders that might have been missed. Your expertise in these areas would be greatly appreciated to provide insights into this complex case and prevent future occurrences.
+=============================
+Synonyms: ["Papilledema","Swollen discs","Indistinct margins","Blurred disc margins","Suspicious discs","Disc swelling","Optic nerve swelling"]
+
+PseudoSynonyms: ["Pseudopapilledema","Drusen","Tilted disc","Anomalous discs"]
+
+
+Role : You are a experienced doctor who have memory of electronic medical records related to many diseases.
+
+Instruction : please extract the referral reason from the following referral letter  separeted by ###. output your result
+
+output your result directly in format: {"referral_content": "",}
+
+Rule For is_Papilledema : If the referral letter contains one of words in Synonyms, then is_Papilledema = true; If the letter contains words in PseudoSynonyms or doesn't contain words in Synonyms, then is_Papilledema = False.
+
+
+Rule For referral_content : this content should be a whole paragraph which tells Patient need referral. If the referral_letter contains this content, you should include it. If the letter doesn't contain related information, then it should be null.
+
+###
+
+Dear Colleague,
+
+I am writing to refer Mrs. Jane Doe, a 60-year-old Caucasian female, who presented with a history of epigastric pain following sushi consumption. A subsequent CT scan revealed thickened gastric mucosa in the distal body. An EGD demonstrated an area of mucosal induration and erythema with a parasite attached to the site.
+
+The reason for this referral is the confirmed diagnosis of Anisakis simplex infection. The parasite was carefully removed using standard biopsy forceps, and microbiological examination confirmed the species. Although her symptoms improved rapidly post-endoscopic removal, further follow-up and potential treatment are necessary to ensure complete eradication and to monitor for any residual effects.
+
+Please feel free to contact me if you need any additional information.
+
+Sincerely,
+Dr. John Smith
+
+### The reason for this referral is the confirmed diagnosis of Anisakis simplex infection. The parasite was carefully removed using standard biopsy forceps, and microbiological examination confirmed the species. Although her symptoms improved rapidly post-endoscopic removal, further follow-up and potential treatment are necessary to ensure complete eradication and to monitor for any residual effects.
+prediction:  The reason for this referral is the confirmed diagnosis of Anisakis simplex infection. The parasite was carefully removed using standard biopsy forceps, and microbiological examination confirmed the species. Although her symptoms improved rapidly post-endoscopic removal, further follow-up and potential treatment are necessary to ensure complete eradication and to monitor for any residual effects.
+
+ground_truth: The reason for this referral is the confirmed diagnosis of Anisakis simplex infection. The parasite was carefully removed using standard biopsy forceps, and microbiological examination confirmed the species. Although her symptoms improved rapidly post-endoscopic removal, further follow-up and potential treatment are necessary to ensure complete eradication and to monitor for any residual effects.
+=============================
+Synonyms: ["Papilledema","Swollen discs","Indistinct margins","Blurred disc margins","Suspicious discs","Disc swelling","Optic nerve swelling"]
+
+PseudoSynonyms: ["Pseudopapilledema","Drusen","Tilted disc","Anomalous discs"]
+
+
+Role : You are a experienced doctor who have memory of electronic medical records related to many diseases.
+
+Instruction : please extract the referral reason from the following referral letter  separeted by ###. output your result
+
+output your result directly in format: {"referral_content": "",}
+
+Rule For is_Papilledema : If the referral letter contains one of words in Synonyms, then is_Papilledema = true; If the letter contains words in PseudoSynonyms or doesn't contain words in Synonyms, then is_Papilledema = False.
+
+
+Rule For referral_content : this content should be a whole paragraph which tells Patient need referral. If the referral_letter contains this content, you should include it. If the letter doesn't contain related information, then it should be null.
+
+###
+
+Dear Dr. Smith,
+
+I am writing to refer Mrs. Jane Doe, a 75-year-old female, to your care. Mrs. Doe has a significant medical history including recurrent hospitalizations for atrial fibrillation, heart failure, and sepsis. Recently, she was admitted to the emergency room due to circulatory collapse.
+
+The referral reason is to further evaluate and manage her thyroid function and electrolyte imbalance. Despite conventional treatment including thyroid hormone and mechanical ventilation support, her condition deteriorated and she succumbed after a few days. Comprehensive endocrinologic and cardiac evaluation is critical for potential future similar cases and to understand the underlying complexities of her conditions.
+
+Thank you for your attention to this case. Please feel free to contact me for any further information.
+
+Sincerely,
+Dr. John Smith
+
+### The referral reason is to further evaluate and manage her thyroid function and electrolyte imbalance. Despite conventional treatment including thyroid hormone and mechanical ventilation support, her condition deteriorated and she succumbed after a few days. Comprehensive endocrinologic and cardiac evaluation is critical for potential future similar cases and to understand the underlying complexities of her conditions.
+prediction:  The referral reason is to further evaluate and manage her thyroid function and electrolyte imbalance. Despite conventional treatment including thyroid hormone and mechanical ventilation support, her condition deteriorated and she succumbed after a few days. Comprehensive endocrinologic and cardiac evaluation is critical for potential future similar cases and to understand the underlying complexities of her conditions.
+
+ground_truth: The referral reason is to further evaluate and manage her thyroid function and electrolyte imbalance. Despite conventional treatment including thyroid hormone and mechanical ventilation support, her condition deteriorated and she succumbed after a few days. Comprehensive endocrinologic and cardiac evaluation is critical for potential future similar cases and to understand the underlying complexities of her conditions.
+=============================
+Synonyms: ["Papilledema","Swollen discs","Indistinct margins","Blurred disc margins","Suspicious discs","Disc swelling","Optic nerve swelling"]
+
+PseudoSynonyms: ["Pseudopapilledema","Drusen","Tilted disc","Anomalous discs"]
+
+
+Role : You are a experienced doctor who have memory of electronic medical records related to many diseases.
+
+Instruction : please extract the referral reason from the following referral letter  separeted by ###. output your result
+
+output your result directly in format: {"referral_content": "",}
+
+Rule For is_Papilledema : If the referral letter contains one of words in Synonyms, then is_Papilledema = true; If the letter contains words in PseudoSynonyms or doesn't contain words in Synonyms, then is_Papilledema = False.
+
+
+Rule For referral_content : this content should be a whole paragraph which tells Patient need referral. If the referral_letter contains this content, you should include it. If the letter doesn't contain related information, then it should be null.
+
+###
+
+Dear Dr. Smith,
+
+I hope this letter finds you well. I am referring Mr. John Doe, a 28-year-old male, to your clinic. Eight years ago, he was assaulted and sustained significant trauma to his nose.
+
+Mr. Doe underwent a complex reconstructive surgery which included the use of eighth costal cartilage to rebuild the nasal framework, along with osteotomies to correct the structure. Post-operative results indicate good correction and improved nasal definition, projection, and tip support. The pliability of the lobule has also been well-maintained.
+
+The reason for this referral is for a specialized follow-up assessment. Mr. Doe requires a detailed evaluation of his surgical outcomes to ensure long-term stability and functionality of the nasal structure. An expert opinion on any need for further intervention would be highly beneficial.
+
+Thank you for your attention to this matter.
+
+Sincerely,
+Dr. Jane Williams
+
+### The reason for this referral is for a specialized follow-up assessment. Mr. Doe requires a detailed evaluation of his surgical outcomes to ensure long-term stability and functionality of the nasal structure. An expert opinion on any need for further intervention would be highly beneficial.
+prediction:  The reason for this referral is for a specialized follow-up assessment. Mr. Doe requires a detailed evaluation of his surgical outcomes to ensure long-term stability and functionality of the nasal structure. An expert opinion on any need for further intervention would be highly beneficial.
+
+ground_truth: The reason for this referral is for a specialized follow-up assessment. Mr. Doe requires a detailed evaluation of his surgical outcomes to ensure long-term stability and functionality of the nasal structure. An expert opinion on any need for further intervention would be highly beneficial.
+=============================
+Synonyms: ["Papilledema","Swollen discs","Indistinct margins","Blurred disc margins","Suspicious discs","Disc swelling","Optic nerve swelling"]
+
+PseudoSynonyms: ["Pseudopapilledema","Drusen","Tilted disc","Anomalous discs"]
+
+
+Role : You are a experienced doctor who have memory of electronic medical records related to many diseases.
+
+Instruction : please extract the referral reason from the following referral letter  separeted by ###. output your result
+
+output your result directly in format: {"referral_content": "",}
+
+Rule For is_Papilledema : If the referral letter contains one of words in Synonyms, then is_Papilledema = true; If the letter contains words in PseudoSynonyms or doesn't contain words in Synonyms, then is_Papilledema = False.
+
+
+Rule For referral_content : this content should be a whole paragraph which tells Patient need referral. If the referral_letter contains this content, you should include it. If the letter doesn't contain related information, then it should be null.
+
+###
+
+Dr. Anthony Brown
+
+St. Mary Hospital
+
+Dear Dr. Brown,
+
+I am writing to refer Mr. John Doe, a 73-year-old Caucasian man with a 6-year history of Parkinson's Disease (PD), who has been experiencing wearing-off phenomena and REM sleep behavior disorder (RBD). Additional complications include frequent backward falls, blurry vision, diplopia, neck rigidity, urinary incontinence, stridor, dysphagia, and dysarthria appearing at age 71. His final clinical diagnosis is Progressive Supranuclear Palsy (PSP).
+
+The reason for the referral is the progression and complexity of Mr. Doe's symptoms, particularly the slow vertical saccades and limited upgaze, which need specialized neurological management and potential therapeutic interventions for PSP.
+
+Thank you for your attention to this matter. Please let me know if you require further information.
+
+Best regards,
+
+Dr. Sarah Collins
+
+### The reason for the referral is the progression and complexity of Mr. Doe's symptoms, particularly the slow vertical saccades and limited upgaze, which need specialized neurological management and potential therapeutic interventions for PSP.
+prediction:  The reason for the referral is the progression and complexity of Mr. Doe's symptoms, particularly the slow vertical saccades and limited upgaze, which need specialized neurological management and potential therapeutic interventions for PSP.
+
+ground_truth: The reason for the referral is the progression and complexity of Mr. Doe's symptoms, particularly the slow vertical saccades and limited upgaze, which need specialized neurological management and potential therapeutic interventions for PSP.
+=============================
+Synonyms: ["Papilledema","Swollen discs","Indistinct margins","Blurred disc margins","Suspicious discs","Disc swelling","Optic nerve swelling"]
+
+PseudoSynonyms: ["Pseudopapilledema","Drusen","Tilted disc","Anomalous discs"]
+
+
+Role : You are a experienced doctor who have memory of electronic medical records related to many diseases.
+
+Instruction : please extract the referral reason from the following referral letter  separeted by ###. output your result
+
+output your result directly in format: {"referral_content": "",}
+
+Rule For is_Papilledema : If the referral letter contains one of words in Synonyms, then is_Papilledema = true; If the letter contains words in PseudoSynonyms or doesn't contain words in Synonyms, then is_Papilledema = False.
+
+
+Rule For referral_content : this content should be a whole paragraph which tells Patient need referral. If the referral_letter contains this content, you should include it. If the letter doesn't contain related information, then it should be null.
+
+###
+
+Dear Dr. [Specialist's Name],
+
+I am writing to refer John Doe, a 17-year-old male with a medical history notably including asthma and recurrent pneumothorax. He was recently admitted due to chest pain and subsequently diagnosed with a left pneumothorax.
+
+During the surgical intervention, a lung biopsy was performed, revealing focal bullous lesion, sub-pleural scarring, and intra-alveolar histiocytes. 
+
+Given these findings, a detailed pulmonary evaluation and potential further intervention are warranted.
+
+Please find attached all relevant medical records for your review. Your expert evaluation and management of this case would be highly appreciated.
+
+Best regards,
+Dr. Jane Smith
+[Clinic Name]
+[Contact Information]
+
+### Given these findings, a detailed pulmonary evaluation and potential further intervention are warranted.
+prediction:  Given these findings, a detailed pulmonary evaluation and potential further intervention are warranted.
+
+ground_truth: Given these findings, a detailed pulmonary evaluation and potential further intervention are warranted.
+=============================
+Synonyms: ["Papilledema","Swollen discs","Indistinct margins","Blurred disc margins","Suspicious discs","Disc swelling","Optic nerve swelling"]
+
+PseudoSynonyms: ["Pseudopapilledema","Drusen","Tilted disc","Anomalous discs"]
+
+
+Role : You are a experienced doctor who have memory of electronic medical records related to many diseases.
+
+Instruction : please extract the referral reason from the following referral letter  separeted by ###. output your result
+
+output your result directly in format: {"referral_content": "",}
+
+Rule For is_Papilledema : If the referral letter contains one of words in Synonyms, then is_Papilledema = true; If the letter contains words in PseudoSynonyms or doesn't contain words in Synonyms, then is_Papilledema = False.
+
+
+Rule For referral_content : this content should be a whole paragraph which tells Patient need referral. If the referral_letter contains this content, you should include it. If the letter doesn't contain related information, then it should be null.
+
+###
+
+Dear Colleague,
+
+I am writing to refer a 16-year-old male patient who has presented with significant weight loss over the past year, along with headaches and visual impairment that have developed in the last two months. Initial MRI imaging revealed a left-sided fronto-temporo-insular mass that was hypointense on T1-weighted images with inhomogeneous contrast enhancement and significant mass effect. The mass also showed a slightly hyperintense signal on FLAIR and T2-weighted images, with signs of a small surrounding edema. Despite partial resection and radiochemotherapy with temozolomide, the tumor progressed rapidly, and the patient deceased 21 months after surgery.
+
+The patient is referred due to the rapid progression of the tumor despite initial treatment modalities. Further evaluation and management from a specialized neuro-oncology team are essential for this recurrent and aggressive tumor.
+
+Best regards,
+Dr. [Your Name]
+[Your Contact Information]
+
+### The patient is referred due to the rapid progression of the tumor despite initial treatment modalities. Further evaluation and management from a specialized neuro-oncology team are essential for this recurrent and aggressive tumor.
+prediction:  The patient is referred due to the rapid progression of the tumor despite initial treatment modalities. Further evaluation and management from a specialized neuro-oncology team are essential for this recurrent and aggressive tumor.
+
+ground_truth: The patient is referred due to the rapid progression of the tumor despite initial treatment modalities. Further evaluation and management from a specialized neuro-oncology team are essential for this recurrent and aggressive tumor.
+=============================
+Synonyms: ["Papilledema","Swollen discs","Indistinct margins","Blurred disc margins","Suspicious discs","Disc swelling","Optic nerve swelling"]
+
+PseudoSynonyms: ["Pseudopapilledema","Drusen","Tilted disc","Anomalous discs"]
+
+
+Role : You are a experienced doctor who have memory of electronic medical records related to many diseases.
+
+Instruction : please extract the referral reason from the following referral letter  separeted by ###. output your result
+
+output your result directly in format: {"referral_content": "",}
+
+Rule For is_Papilledema : If the referral letter contains one of words in Synonyms, then is_Papilledema = true; If the letter contains words in PseudoSynonyms or doesn't contain words in Synonyms, then is_Papilledema = False.
+
+
+Rule For referral_content : this content should be a whole paragraph which tells Patient need referral. If the referral_letter contains this content, you should include it. If the letter doesn't contain related information, then it should be null.
+
+###
+
+Dear Dr. Smith,
+
+I am writing to refer MG, a 77-year-old female patient, who presented with initially mild weakness of the oropharyngeal muscles. A chest CT was performed to evaluate for thymic pathology, but no pathological findings were revealed. Her symptoms aggravated 23 days after the CT scan.
+
+Referral Reason: The patient's symptoms have worsened despite treatment with cholinesterase inhibitors. She has shown improvement with repeated plasmapheresis and initiation of prednisolone therapy, but ongoing specialized care and evaluation are needed to manage her condition effectively.
+
+Thank you for your attention to this case. Please let me know if additional information is required.
+
+Sincerely,
+
+Dr. Johnson
+
+### The patient's symptoms have worsened despite treatment with cholinesterase inhibitors. She has shown improvement with repeated plasmapheresis and initiation of prednisolone therapy, but ongoing specialized care and evaluation are needed to manage her condition effectively.
+prediction:  The patient's symptoms have worsened despite treatment with cholinesterase inhibitors. She has shown improvement with repeated plasmapheresis and initiation of prednisolone therapy, but ongoing specialized care and evaluation are needed to manage her condition effectively.
+
+ground_truth: The patient's symptoms have worsened despite treatment with cholinesterase inhibitors. She has shown improvement with repeated plasmapheresis and initiation of prednisolone therapy, but ongoing specialized care and evaluation are needed to manage her condition effectively.
+=============================
+Synonyms: ["Papilledema","Swollen discs","Indistinct margins","Blurred disc margins","Suspicious discs","Disc swelling","Optic nerve swelling"]
+
+PseudoSynonyms: ["Pseudopapilledema","Drusen","Tilted disc","Anomalous discs"]
+
+
+Role : You are a experienced doctor who have memory of electronic medical records related to many diseases.
+
+Instruction : please extract the referral reason from the following referral letter  separeted by ###. output your result
+
+output your result directly in format: {"referral_content": "",}
+
+Rule For is_Papilledema : If the referral letter contains one of words in Synonyms, then is_Papilledema = true; If the letter contains words in PseudoSynonyms or doesn't contain words in Synonyms, then is_Papilledema = False.
+
+
+Rule For referral_content : this content should be a whole paragraph which tells Patient need referral. If the referral_letter contains this content, you should include it. If the letter doesn't contain related information, then it should be null.
+
+###
+
+Dear Dr. Smith, 
+
+I hope this letter finds you well. I am writing to refer Mr. John Doe, a 32-year-old Caucasian male who has been under our care since infancy.
+
+Mr. Doe has a comprehensive medical history including genetic analysis conducted with the consent of his parents. The examination and investigation results are suggestive of an underlying genetic condition that warrants further specialized evaluation.
+
+The primary reason for this referral is to explore advanced genetic testing and counseling, given the findings from our initial genetic analysis. Your expertise in this area will be invaluable for determining an accurate diagnosis and management plan.
+
+Thank you for your attention to this matter.
+
+Best regards,
+Dr. Jane Brown
+
+### The primary reason for this referral is to explore advanced genetic testing and counseling, given the findings from our initial genetic analysis. Your expertise in this area will be invaluable for determining an accurate diagnosis and management plan.
+prediction:  The primary reason for this referral is to explore advanced genetic testing and counseling, given the findings from our initial genetic analysis. Your expertise in this area will be invaluable for determining an accurate diagnosis and management plan.
+
+ground_truth: The primary reason for this referral is to explore advanced genetic testing and counseling, given the findings from our initial genetic analysis. Your expertise in this area will be invaluable for determining an accurate diagnosis and management plan.
+=============================
+Synonyms: ["Papilledema","Swollen discs","Indistinct margins","Blurred disc margins","Suspicious discs","Disc swelling","Optic nerve swelling"]
+
+PseudoSynonyms: ["Pseudopapilledema","Drusen","Tilted disc","Anomalous discs"]
+
+
+Role : You are a experienced doctor who have memory of electronic medical records related to many diseases.
+
+Instruction : please extract the referral reason from the following referral letter  separeted by ###. output your result
+
+output your result directly in format: {"referral_content": "",}
+
+Rule For is_Papilledema : If the referral letter contains one of words in Synonyms, then is_Papilledema = true; If the letter contains words in PseudoSynonyms or doesn't contain words in Synonyms, then is_Papilledema = False.
+
+
+Rule For referral_content : this content should be a whole paragraph which tells Patient need referral. If the referral_letter contains this content, you should include it. If the letter doesn't contain related information, then it should be null.
+
+###
+
+Dear Dr. Smith,
+
+I am referring a 37-year-old woman who has a 5-month history of chronic sinusitis without fever. She underwent an allogeneic allograft bone marrow transplant for idiopathic aplasia one year ago. A recent CT scan disclosed right maxillary sinusitis and left focal basal pneumonia, without cavitation. Cultures from bronchoalveolar fluid revealed the presence of Actinomyces spp.
+
+The referral reason is to seek your expert evaluation and further management regarding her chronic sinusitis and recurrent respiratory symptoms post-transplant. Despite her initial response to surgical and antibiotic therapy, her persistent symptoms warrant specialized care in respiratory and infectious disease.
+
+Thank you for your attention to this matter. Please feel free to contact me if there are any questions.
+
+Best regards,
+Dr. Jane Doe
+
+### The referral reason is to seek your expert evaluation and further management regarding her chronic sinusitis and recurrent respiratory symptoms post-transplant. Despite her initial response to surgical and antibiotic therapy, her persistent symptoms warrant specialized care in respiratory and infectious disease.
+prediction:  The referral reason is to seek your expert evaluation and further management regarding her chronic sinusitis and recurrent respiratory symptoms post-transplant. Despite her initial response to surgical and antibiotic therapy, her persistent symptoms warrant specialized care in respiratory and infectious disease.
+
+ground_truth: The referral reason is to seek your expert evaluation and further management regarding her chronic sinusitis and recurrent respiratory symptoms post-transplant. Despite her initial response to surgical and antibiotic therapy, her persistent symptoms warrant specialized care in respiratory and infectious disease.
+=============================
+Synonyms: ["Papilledema","Swollen discs","Indistinct margins","Blurred disc margins","Suspicious discs","Disc swelling","Optic nerve swelling"]
+
+PseudoSynonyms: ["Pseudopapilledema","Drusen","Tilted disc","Anomalous discs"]
+
+
+Role : You are a experienced doctor who have memory of electronic medical records related to many diseases.
+
+Instruction : please extract the referral reason from the following referral letter  separeted by ###. output your result
+
+output your result directly in format: {"referral_content": "",}
+
+Rule For is_Papilledema : If the referral letter contains one of words in Synonyms, then is_Papilledema = true; If the letter contains words in PseudoSynonyms or doesn't contain words in Synonyms, then is_Papilledema = False.
+
+
+Rule For referral_content : this content should be a whole paragraph which tells Patient need referral. If the referral_letter contains this content, you should include it. If the letter doesn't contain related information, then it should be null.
+
+###
+
+Dear Consultant,
+
+I am referring a 4-year-old girl who presented to the emergency department with severe back pain. Initial investigations included a CBC which revealed pancytopenia and anemia. Comprehensive imaging was performed, showing multiple dorsolumbar-collapsed vertebrae.
+
+Bone marrow aspiration has confirmed the diagnosis of Acute Lymphoblastic Leukemia (ALL).
+
+Given the confirmed diagnosis of ALL and the complexity of her condition, I am referring her for specialized hematologic evaluation and treatment.
+
+Thank you for your attention to this case.
+
+Sincerely,
+Dr. John Smith
+
+### Given the confirmed diagnosis of ALL and the complexity of her condition, I am referring her for specialized hematologic evaluation and treatment.
+prediction:  Given the confirmed diagnosis of ALL and the complexity of her condition, I am referring her for specialized hematologic evaluation and treatment.
+
+ground_truth: Given the confirmed diagnosis of ALL and the complexity of her condition, I am referring her for specialized hematologic evaluation and treatment.
+=============================
+Synonyms: ["Papilledema","Swollen discs","Indistinct margins","Blurred disc margins","Suspicious discs","Disc swelling","Optic nerve swelling"]
+
+PseudoSynonyms: ["Pseudopapilledema","Drusen","Tilted disc","Anomalous discs"]
+
+
+Role : You are a experienced doctor who have memory of electronic medical records related to many diseases.
+
+Instruction : please extract the referral reason from the following referral letter  separeted by ###. output your result
+
+output your result directly in format: {"referral_content": "",}
+
+Rule For is_Papilledema : If the referral letter contains one of words in Synonyms, then is_Papilledema = true; If the letter contains words in PseudoSynonyms or doesn't contain words in Synonyms, then is_Papilledema = False.
+
+
+Rule For referral_content : this content should be a whole paragraph which tells Patient need referral. If the referral_letter contains this content, you should include it. If the letter doesn't contain related information, then it should be null.
+
+###
+
+Dr. Smith,
+
+A 20-year-old male, John Doe, was brought to the emergency unit in a comatose state after methamphetamine abuse. Prior to presentation, he experienced three episodes of seizure, perspiration, palpitation, and altered behaviors. His BP was 60 mmHg, PR was 120 per minute, and RR was 30 per minute. Laboratory findings revealed metabolic acidosis. Brain CT scan showed extensive temporo-parieto-occipital infarction in the left cerebral hemisphere.
+
+The patient requires urgent neurological evaluation and further management of the extensive cerebral infarction observed in the brain CT scan.
+
+Best regards,
+Dr. Jane
+
+### The patient requires urgent neurological evaluation and further management of the extensive cerebral infarction observed in the brain CT scan.
+prediction:  The patient requires urgent neurological evaluation and further management of the extensive cerebral infarction observed in the brain CT scan.
+
+ground_truth: The patient requires urgent neurological evaluation and further management of the extensive cerebral infarction observed in the brain CT scan.
+=============================
+Synonyms: ["Papilledema","Swollen discs","Indistinct margins","Blurred disc margins","Suspicious discs","Disc swelling","Optic nerve swelling"]
+
+PseudoSynonyms: ["Pseudopapilledema","Drusen","Tilted disc","Anomalous discs"]
+
+
+Role : You are a experienced doctor who have memory of electronic medical records related to many diseases.
+
+Instruction : please extract the referral reason from the following referral letter  separeted by ###. output your result
+
+output your result directly in format: {"referral_content": "",}
+
+Rule For is_Papilledema : If the referral letter contains one of words in Synonyms, then is_Papilledema = true; If the letter contains words in PseudoSynonyms or doesn't contain words in Synonyms, then is_Papilledema = False.
+
+
+Rule For referral_content : this content should be a whole paragraph which tells Patient need referral. If the referral_letter contains this content, you should include it. If the letter doesn't contain related information, then it should be null.
+
+###
+
+Dear Dr. Smith,
+
+I am writing to refer our patient, Mr. John Doe, aged 45, for further evaluation of suspicious discs. He has been presenting with visual disturbances, and upon examination, there appears to be disc swelling.
+
+Patient Information:
+Name: John Doe
+Age: 45
+Primary Complaint: Visual disturbances
+
+Referral Reason:
+I am concerned about the possibility of anomalous discs, and I would appreciate your expertise in further diagnosing and managing this condition. Given the complexity, a thorough examination including imaging studies may be necessary to rule out pseudopapilledema and any underlying pathology causing this presentation.
+
+Thank you for your valuable time and expertise.
+
+Sincerely,
+Dr. Jane Thompson
+Ophthalmology Clinic
+jane.thompson@ophthclinic.com
+
+### I am concerned about the possibility of anomalous discs, and I would appreciate your expertise in further diagnosing and managing this condition. Given the complexity, a thorough examination including imaging studies may be necessary to rule out pseudopapilledema and any underlying pathology causing this presentation.
+prediction:  I am concerned about the possibility of anomalous discs, and I would appreciate your expertise in further diagnosing and managing this condition. Given the complexity, a thorough examination including imaging studies may be necessary to rule out pseudopapilledema and any underlying pathology causing this presentation.
+
+ground_truth: I am concerned about the possibility of anomalous discs, and I would appreciate your expertise in further diagnosing and managing this condition. Given the complexity, a thorough examination including imaging studies may be necessary to rule out pseudopapilledema and any underlying pathology causing this presentation.
+=============================
+Synonyms: ["Papilledema","Swollen discs","Indistinct margins","Blurred disc margins","Suspicious discs","Disc swelling","Optic nerve swelling"]
+
+PseudoSynonyms: ["Pseudopapilledema","Drusen","Tilted disc","Anomalous discs"]
+
+
+Role : You are a experienced doctor who have memory of electronic medical records related to many diseases.
+
+Instruction : please extract the referral reason from the following referral letter  separeted by ###. output your result
+
+output your result directly in format: {"referral_content": "",}
+
+Rule For is_Papilledema : If the referral letter contains one of words in Synonyms, then is_Papilledema = true; If the letter contains words in PseudoSynonyms or doesn't contain words in Synonyms, then is_Papilledema = False.
+
+
+Rule For referral_content : this content should be a whole paragraph which tells Patient need referral. If the referral_letter contains this content, you should include it. If the letter doesn't contain related information, then it should be null.
+
+###
+
+Dear Colleague,
+
+I am referring Mr. John Smith, a 72-year-old male, who recently underwent a left upper division segmentectomy. A ground-glass neoplasm was found in the left upper lobe, and it was pathologically diagnosed as adenocarcinoma in situ (AIS), TisN0M0, stage 0.
+
+The reason for referral is the detection of three indels in the noncoding region of the SFTPB gene. Given this early, well-differentiated stage of lung cancer, the noncoding indel mutations suggest early-phase tumor evolution. A specialist in genetic oncology will be better suited to understand the implications and recommend further management.
+
+Please find his medical records enclosed. I appreciate your timely assessment and recommendations.
+
+Sincerely,
+Dr. Emma Hughes
+
+### The reason for referral is the detection of three indels in the noncoding region of the SFTPB gene. Given this early, well-differentiated stage of lung cancer, the noncoding indel mutations suggest early-phase tumor evolution. A specialist in genetic oncology will be better suited to understand the implications and recommend further management.
+prediction:  The reason for referral is the detection of three indels in the noncoding region of the SFTPB gene. Given this early, well-differentiated stage of lung cancer, the noncoding indel mutations suggest early-phase tumor evolution. A specialist in genetic oncology will be better suited to understand the implications and recommend further management.
+
+ground_truth: The reason for referral is the detection of three indels in the noncoding region of the SFTPB gene. Given this early, well-differentiated stage of lung cancer, the noncoding indel mutations suggest early-phase tumor evolution. A specialist in genetic oncology will be better suited to understand the implications and recommend further management.
+=============================
+Synonyms: ["Papilledema","Swollen discs","Indistinct margins","Blurred disc margins","Suspicious discs","Disc swelling","Optic nerve swelling"]
+
+PseudoSynonyms: ["Pseudopapilledema","Drusen","Tilted disc","Anomalous discs"]
+
+
+Role : You are a experienced doctor who have memory of electronic medical records related to many diseases.
+
+Instruction : please extract the referral reason from the following referral letter  separeted by ###. output your result
+
+output your result directly in format: {"referral_content": "",}
+
+Rule For is_Papilledema : If the referral letter contains one of words in Synonyms, then is_Papilledema = true; If the letter contains words in PseudoSynonyms or doesn't contain words in Synonyms, then is_Papilledema = False.
+
+
+Rule For referral_content : this content should be a whole paragraph which tells Patient need referral. If the referral_letter contains this content, you should include it. If the letter doesn't contain related information, then it should be null.
+
+###
+
+Dear Dr. Smith,
+
+I hope this letter finds you well. I am writing to refer a patient for further evaluation and management.
+
+Patient Information:
+Name: John Doe
+Age: 47
+Gender: Male
+
+The reason for this referral is the presence of pseudopapilledema. The patient presents with blurred optic disc margins, raising suspicion for potential drusen or other related anomalies. Given the patient's complex ocular history and the need for specialized diagnostic tools, your expert opinion and further assessment are requested.
+
+Thank you for your attention to this case.
+
+Sincerely, 
+Dr. Jane Doe
+Ophthalmology Department
+Smile Eye Clinic
+Email: janedoe@smileeyeclinic.com
+
+### The reason for this referral is the presence of pseudopapilledema. The patient presents with blurred optic disc margins, raising suspicion for potential drusen or other related anomalies. Given the patient's complex ocular history and the need for specialized diagnostic tools, your expert opinion and further assessment are requested.
+prediction:  The reason for this referral is the presence of pseudopapilledema. The patient presents with blurred optic disc margins, raising suspicion for potential drusen or other related anomalies. Given the patient's complex ocular history and the need for specialized diagnostic tools, your expert opinion and further assessment are requested.
+
+ground_truth: The reason for this referral is the presence of pseudopapilledema. The patient presents with blurred optic disc margins, raising suspicion for potential drusen or other related anomalies. Given the patient's complex ocular history and the need for specialized diagnostic tools, your expert opinion and further assessment are requested.
+=============================
+Synonyms: ["Papilledema","Swollen discs","Indistinct margins","Blurred disc margins","Suspicious discs","Disc swelling","Optic nerve swelling"]
+
+PseudoSynonyms: ["Pseudopapilledema","Drusen","Tilted disc","Anomalous discs"]
+
+
+Role : You are a experienced doctor who have memory of electronic medical records related to many diseases.
+
+Instruction : please extract the referral reason from the following referral letter  separeted by ###. output your result
+
+output your result directly in format: {"referral_content": "",}
+
+Rule For is_Papilledema : If the referral letter contains one of words in Synonyms, then is_Papilledema = true; If the letter contains words in PseudoSynonyms or doesn't contain words in Synonyms, then is_Papilledema = False.
+
+
+Rule For referral_content : this content should be a whole paragraph which tells Patient need referral. If the referral_letter contains this content, you should include it. If the letter doesn't contain related information, then it should be null.
+
+###
+
+Dear Dr. Smith,
+
+I am writing to refer an 11-year-old male patient who has been experiencing repeated vomiting and headaches over the past month. On examination, he was found to have right-sided homonymous hemianopia and papilledema. MRI indicated a ring enhancing cystic mass lesion with perilesional edema in the left occipito-parietal region.
+
+Craniotomy was performed with a suspected diagnosis of high-grade glioma. Intra-operatively, a thin but vascular cyst containing yellowish fluid was identified, and the tumor was excised. Histomorphological examination and immunohistochemistry findings are pending detailed analysis.
+
+The patient needs a referral to a pediatric neurologist for further evaluation and management, especially to monitor and manage the potential recurrence of the lesion and to ensure comprehensive care.
+
+Thank you for your attention to this urgent matter.
+
+Sincerely,
+Dr. John Doe
+
+### The patient needs a referral to a pediatric neurologist for further evaluation and management, especially to monitor and manage the potential recurrence of the lesion and to ensure comprehensive care.
+prediction:  The patient needs a referral to a pediatric neurologist for further evaluation and management, especially to monitor and manage the potential recurrence of the lesion and to ensure comprehensive care.
+
+ground_truth: The patient needs a referral to a pediatric neurologist for further evaluation and management, especially to monitor and manage the potential recurrence of the lesion and to ensure comprehensive care.
+=============================
