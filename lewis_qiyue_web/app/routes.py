@@ -8,7 +8,7 @@ import os
 from my_ocr import OCRDetector
 import logging
 
-HTML_FILE = "webpage.HTML"
+HTML_FILE = "webpage.html"
 logging.basicConfig(level=logging.DEBUG)
 
 bp = Blueprint('main', __name__)
