@@ -32,7 +32,7 @@ def upload_single():
     if file and check_file_extension(file.filename):
         # Sanitise the file name
         filename = secure_filename(file.filename)
-        file_path = os.path.join(current_app.config['UPLOAD_FOLDER'], filename)
+        file_path = os.path.join(current_app.static_folder, current_app.config['UPLOAD_FOLDER'], filename)
         logging.debug(f"Saving file to: {file_path}")
         file.save(file_path)
 
@@ -71,7 +71,7 @@ def upload_folder():
     for file in files:
         if file and check_file_extension(file.filename):
             filename = secure_filename(file.filename)
-            file_path = os.path.join(current_app.config['UPLOAD_FOLDER'], filename)
+            file_path = os.path.join(current_app.static_folder, current_app.config["UPLOAD_FOLDER"], filename)
             logging.debug(f"Saving file to: {file_path}")
             file.save(file_path)
 
