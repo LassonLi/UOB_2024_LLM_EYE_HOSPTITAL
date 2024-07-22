@@ -30,6 +30,5 @@ def create_app():
     # so all routes/handlers defined in the blueprint available in the main application
     app.register_blueprint(routes.bp)
 
-
     return app
 
