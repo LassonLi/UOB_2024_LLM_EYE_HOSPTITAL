@@ -115,7 +115,7 @@ def generate_instruction_following_data(
         all_outputs = all_outputs[:12] # lasson add
     all_output_tokens = [scorer._tokenizer.tokenize(out) for out in all_outputs]
 
-    seed_cnt = 101 # lasson add, since we already have 3 data in regen.json
+    seed_cnt = 701 # lasson add, since we already have 3 data in regen.json
     while len(machine_output_data) < num_instructions_to_generate:
         request_idx += 1
 
@@ -167,7 +167,7 @@ def generate_instruction_following_data(
                 continue
             else:
                 keep += 1
-            data_entry["most_similar_outputs"] = most_similar_outputs
+            # data_entry["most_similar_outputs"] = most_similar_outputs
             data_entry["avg_similarity_score"] = float(np.mean(rouge_scores))
             data_entry["name"] = name_list[index] # lasson add
             machine_output_data.append(data_entry)
