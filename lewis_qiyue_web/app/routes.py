@@ -2,7 +2,7 @@ import csv
 import traceback
 from io import StringIO
 
-from flask import Blueprint, render_template, request, jsonify, current_app
+from flask import Blueprint, render_template, request, jsonify, current_app, url_for
 from werkzeug.utils import secure_filename
 import os
 from my_ocr import OCRDetector
@@ -41,7 +41,9 @@ def upload_single():
         try:
             text = detector.run_quickstart(file_path)
             logging.debug("OCR processing complete")
-            return render_template(HTML_FILE, text=text)
+            #display image_url on the website
+            image_url = url_for('static',filename='uploads/' + filename)
+            return render_template(HTML_FILE, text=text, image_url=image_url)
         except Exception as e:
             logging.error(f"Error during OCR processing: {e}")
             return render_template(HTML_FILE, single_error=str(e))
