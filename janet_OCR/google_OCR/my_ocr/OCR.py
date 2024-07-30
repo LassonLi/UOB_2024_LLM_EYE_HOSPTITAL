@@ -28,7 +28,9 @@ class OCRDetector:
 
         # Performs label detection on the image file
         response = self.client.text_detection(image=image)
+        print(response)
         texts = response.text_annotations
+        # print(texts)
 
         return texts[0].description
 
@@ -39,4 +41,4 @@ if __name__ == "__main__":
     text = detector.run_quickstart("assests/Referral_letter_example.jpg")
     # print(text)
 
-    detector.calculate_score_from_dataset("/Users/lishin/Desktop/Bristol/Summer Project/UOB_2024_LLM_EYE_HOSPTITAL/janet_OCR/dataset/training_data")
+    # detector.calculate_score_from_dataset("/Users/lishin/Desktop/Bristol/Summer Project/UOB_2024_LLM_EYE_HOSPTITAL/janet_OCR/dataset/training_data")
