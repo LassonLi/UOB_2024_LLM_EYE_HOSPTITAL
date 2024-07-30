@@ -13,19 +13,25 @@
     </header>
 
     <main>
-        <form action="{{ url_for('main.upload') }}" method="post" enctype="multipart/form-data">
+        <h2> Upload a Single File </h2>
+        <form action="{{ url_for('main.upload_single') }}" method="post" enctype="multipart/form-data">
             <label for="image">Choose an image file:</label>
             <input type="file" id="image" name="image" accept="image/*, application/pdf" required>
             <button type="submit">Convert</button>
         </form>
-
+        {% if single_error %}
+            <div class="error">
+                <p> {{ single_error }}</p>
+            </div>
+        {%  endif %}
         <div class="content">
             {% if image_url %}
                 <div class="image-section">
                     <h2>Uploaded Image</h2>
-                    <img src="{{ url_for('static', filename=image_url) }}" alt="Uploaded Image">
+                    <img src="{{ image_url }}" alt="Uploaded Image">
                 </div>
             {% endif %}
+
             {% if text %}
                 <div class="text-section">
                     <h2>Extraction Result</h2>
@@ -34,12 +40,33 @@
                 </div>
             {% endif %}
         </div>
+    
 
-        {% if error %}
+        <h2> Upload A Folder </h2>
+        <form action="{{ url_for('main.upload_folder') }}" method="post" enctype="multipart/form-data">
+            <label for="folder">Choose a folder:</label>
+            <input type="file" id="folder" name="folder" webkitdirectory directory multiple required>
+            <button type="submit">Convert</button>
+        </form>
+        {% if folder_error %}
             <div class="error">
-                <p>{{ error }}</p>
+                <p>{{ folder_error }}</p>
             </div>
         {% endif %}
+
+        {% if csv_file %}
+            <div class="result">
+                <h2>CSV File Created</h2>
+                <p>Download your CSV file <a href="{{ url_for('static', filename='csv/' + csv_file) }}">here</a>.</p>
+            </div>
+
+        {% endif %}
+
+        <div class="back-button">
+            <button onclick="window.location.href='{{ url_for('main.index') }}'">Refresh</button>
+        </div>
+
+
     </main>
 
 </body>

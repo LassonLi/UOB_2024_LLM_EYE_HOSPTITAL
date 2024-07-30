@@ -1,0 +1,4 @@
+{
+  "prompt": "{instruction}\n\n###\n\n{whole_letter}\n\n###",
+  "completion": "{referral_content}"
+}
