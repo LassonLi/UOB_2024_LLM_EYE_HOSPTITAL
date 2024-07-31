@@ -19,7 +19,7 @@ class TesseractOCR:
 
 if __name__ == "__main__":
     ocr = TesseractOCR('/opt/homebrew/Cellar/tesseract/5.4.1/bin/tesseract')
-    result_string = ocr.perform_ocr("assests/Referral_letter_example.jpg")
+    result_string = ocr.perform_ocr("../assests/Referral_letter_example.jpg")
     print(result_string)
 
 
