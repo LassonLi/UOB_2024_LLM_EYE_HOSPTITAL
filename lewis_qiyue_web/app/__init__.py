@@ -1,34 +1,32 @@
+import os
+import sys
 from flask import Flask
 
-import config
+# Add the parent directory to the sys.path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 from config import Config
-import os
 
-
-# Create and initialise Flask application instance
 def create_app():
-    # Create Flask app instance
     app = Flask(__name__)
-
-    # Set up configuration settings for the Flask app
     app.config.from_object(Config)
 
-    #Print details of app.config
-    print(app.config["CREDENTIAL_PATH"])
+    print(f"Config CREDENTIAL_PATH: {app.config['CREDENTIAL_PATH']}")
 
-    # Set up the Google Cloud credentials environmnet variable
     os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = app.config["CREDENTIAL_PATH"]
     os.environ["GOOGLE_CLOUD_PROJECT"] = "ocr-project-427217"
 
-    # Ensure the uploads directory exists within the static folder
     upload_path = os.path.join(app.static_folder, app.config["UPLOAD_FOLDER"])
     os.makedirs(upload_path, exist_ok=True)
+    print(f"Upload path created: {upload_path}")
 
-    # Import thr routes module
-    from . import routes
-    # Register the blueprint with the Flask app instance
-    # so all routes/handlers defined in the blueprint available in the main application
+    from app import routes
     app.register_blueprint(routes.bp)
 
     return app
 
+if __name__ == '__main__':
+    print("Starting Flask application...")
+    app = create_app()
+    print("Flask application created")
+    app.run(host='0.0.0.0', port=5000)

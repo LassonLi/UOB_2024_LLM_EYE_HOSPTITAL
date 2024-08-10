@@ -4,70 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image to Text Converter</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
 
-    <header>
+    <header class="bg-dark text-white text-center py-4">
         <h1>Image to Text Converter</h1>
     </header>
 
-    <main>
-        <h2> Upload a Single File </h2>
-        <form action="{{ url_for('main.upload_single') }}" method="post" enctype="multipart/form-data">
-            <label for="image">Choose an image file:</label>
-            <input type="file" id="image" name="image" accept="image/*, application/pdf" required>
-            <button type="submit">Convert</button>
-        </form>
-        {% if single_error %}
-            <div class="error">
-                <p> {{ single_error }}</p>
-            </div>
-        {%  endif %}
-        <div class="content">
-            {% if image_url %}
-                <div class="image-section">
-                    <h2>Uploaded Image</h2>
-                    <img src="{{ image_url }}" alt="Uploaded Image">
+    <main class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow-sm mb-5">
+                    <div class="card-body">
+                        <h2 class="card-title">Upload a Single File</h2>
+                        <form action="{{ url_for('main.upload_single') }}" method="post" enctype="multipart/form-data" class="mb-4">
+                            <div class="form-group">
+                                <label for="image">Choose an image file:</label>
+                                <input type="file" id="image" name="image" accept="image/*, application/pdf" class="form-control-file" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Convert</button>
+                        </form>
+                        {% if single_error %}
+                            <div class="alert alert-danger">
+                                <p>{{ single_error }}</p>
+                            </div>
+                        {% endif %}
+                        <div class="content">
+                            {% if image_url %}
+                                <div class="image-section text-center">
+                                    <h2>Uploaded Image</h2>
+                                    <img src="{{ image_url }}" alt="Uploaded Image" class="img-fluid rounded shadow-sm">
+                                </div>
+                            {% endif %}
+
+                            {% if text %}
+                                <div class="text-section mt-4">
+                                    <h2>Extraction Result</h2>
+                                    <p>Here is the text extracted from your image:</p>
+                                    <div class="bg-light p-3 border rounded">{{ text }}</div>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
                 </div>
-            {% endif %}
 
-            {% if text %}
-                <div class="text-section">
-                    <h2>Extraction Result</h2>
-                    <p>Here is the text extracted from your image:</p>
-                    <p>{{ text }}</p>
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h2 class="card-title">Upload A Folder</h2>
+                        <form action="{{ url_for('main.upload_folder') }}" method="post" enctype="multipart/form-data" class="mb-4">
+                            <div class="form-group">
+                                <label for="folder">Choose a folder:</label>
+                                <input type="file" id="folder" name="folder" webkitdirectory directory multiple class="form-control-file" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Convert</button>
+                        </form>
+                        {% if folder_error %}
+                            <div class="alert alert-danger">
+                                <p>{{ folder_error }}</p>
+                            </div>
+                        {% endif %}
+
+                        {% if csv_file %}
+                            <div class="result">
+                                <h2>CSV File Created</h2>
+                                <p>Download your CSV file <a href="{{ url_for('static', filename='csv/' + csv_file) }}">here</a>.</p>
+                            </div>
+                        {% endif %}
+                    </div>
                 </div>
-            {% endif %}
-        </div>
-    
 
-        <h2> Upload A Folder </h2>
-        <form action="{{ url_for('main.upload_folder') }}" method="post" enctype="multipart/form-data">
-            <label for="folder">Choose a folder:</label>
-            <input type="file" id="folder" name="folder" webkitdirectory directory multiple required>
-            <button type="submit">Convert</button>
-        </form>
-        {% if folder_error %}
-            <div class="error">
-                <p>{{ folder_error }}</p>
+                <div class="text-center mt-5">
+                    <button class="btn btn-secondary" onclick="window.location.href='{{ url_for('main.index') }}'">Refresh</button>
+                </div>
             </div>
-        {% endif %}
-
-        {% if csv_file %}
-            <div class="result">
-                <h2>CSV File Created</h2>
-                <p>Download your CSV file <a href="{{ url_for('static', filename='csv/' + csv_file) }}">here</a>.</p>
-            </div>
-
-        {% endif %}
-
-        <div class="back-button">
-            <button onclick="window.location.href='{{ url_for('main.index') }}'">Refresh</button>
         </div>
-
-
     </main>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
