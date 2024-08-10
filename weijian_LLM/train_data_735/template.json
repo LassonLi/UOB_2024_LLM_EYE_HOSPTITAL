@@ -1,0 +1,4 @@
+{
+  "prompt": "{instruction}\n\n###\n\n{whole_letter}\n\n###",
+  "completion": "\"is_Papilledema\": {is_Papilledema}, \"referral_content\": \"{referral_content}\""
+}
