@@ -90,7 +90,7 @@ def upload_single():
             logging.debug("OCR processing complete")
             image_url = url_for('static', filename='uploads/' + filename)
 
-            # 调用封装好的SageMaker函数
+            # Call SageMaker
             referral_content = call_sagemaker(text)
             logging.debug(f"SageMaker response: {referral_content}")
 
@@ -130,7 +130,7 @@ def upload_folder():
                 text = detector.run_quickstart(file_path)
                 logging.debug("OCR processing complete")
 
-                # 调用封装好的SageMaker函数
+                # Call SageMaker
                 referral_content = call_sagemaker(text)
                 logging.debug(f"SageMaker response: {referral_content}")
 
