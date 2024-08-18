@@ -15,11 +15,11 @@ logging.basicConfig(level=logging.DEBUG)
 
 bp = Blueprint('main', __name__)
 
-# 配置AWS区域和Endpoint名称
-region_name = 'eu-west-2'  # 例如，'us-west-2'
+# Set AWS region and end point
+region_name = 'eu-west-2'  # Example，'us-west-2'
 endpoint_name = 'gemma'
 
-# 初始化SageMaker客户端
+# Initialise SageMaker client
 sagemaker_client = boto3.client('sagemaker-runtime', region_name=region_name)
 
 instruction = """Synonyms: ["Papilledema","Swollen discs","Indistinct margins","Blurred disc margins","Suspicious discs","Disc swelling","Optic nerve swelling"]
@@ -38,20 +38,20 @@ def call_sagemaker(whole_letter):
         'parameters': {'max_new_tokens': 256}
     }
 
-    # 序列化输入数据为JSON字符串
+    # Serialise input data to JSON String
     payload = json.dumps(payload_dict)
 
-    # 调用SageMaker Endpoint
+    # Invoke SageMaker Endpoint
     response = sagemaker_client.invoke_endpoint(
         EndpointName=endpoint_name,
-        ContentType='application/json',  # 根据你的模型的要求选择合适的内容类型
+        ContentType='application/json',  # Choose the appropriate content type based on your model's requirements
         Body=payload
     )
 
-    # 解析响应
+    # Parse/decode the response
     result = json.loads(response['Body'].read().decode())
 
-    # 提取referral_content中的内容
+    # Extract the content from referral_content
     generated_text = result[0]["generated_text"]
     referral_content_match = re.search(r'"referral_content":\s*"([^"]+)"', generated_text)
 
