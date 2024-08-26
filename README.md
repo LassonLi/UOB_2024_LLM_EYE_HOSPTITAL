@@ -19,7 +19,7 @@ Notice, all the operations should be on Amazon Web Service sagemaker
 # How to deploy a finetuned llama2 model
 Go to the directory weijian_LLM. And run the 
 ```txt
-lasson_deploy_finetuned_llama2_7b-f.ipynbn
+lasson_deploy_finetuned_llama2_7b-f.ipynb
  ```
 
 ## Citation
